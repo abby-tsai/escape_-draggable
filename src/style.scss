@@ -1,0 +1,83 @@
+body {
+  background: rgb(243 244 246);
+  cursor: url(https://shopify.github.io/draggable/assets/img/cursor-auto.png), auto;
+}
+.box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: .5rem;
+  background: #fff;
+  font-size: 1.15rem;
+  padding: .5rem 1rem;  
+}
+.box + .box{
+  margin-top: 1rem;
+}
+.normal {
+  color: rgb(7 89 133);
+}
+.important {
+  color: rgb(234 179 8);
+}
+.urgent {
+  color: rgb(194 65 12);
+}
+
+.box--isDraggable {
+  cursor: url(https://shopify.github.io/draggable/assets/img/cursor-drag.png), auto;
+}
+li + li {
+  margin-top: -.25rem;
+}
+.draggable-mirror {
+  background: currentColor;
+  color: #fff;
+  cursor: url(https://shopify.github.io/draggable/assets/img/cursor-drag.png), auto;
+  /* FIXME: bug */
+  transform: scale(1.05, 1.05);
+  z-index: 10;
+}
+.draggable-source {
+  color: currentColor;
+  opacity: 0.3;
+}
+
+form input {
+  border: 2px solid rgb(229 231 235);
+  border-radius: 0.5rem;
+  background: transparent;
+  color: rgb(156 163 175);
+  outline: 0;
+  padding: 0 1rem;
+  margin-right: 1rem;
+}
+
+.task-done {
+  position: relative;  
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  border: 2px solid #bbbdc7;
+  border-radius: 50%;
+  background-color: #fff;
+  appearance: none;
+}
+.checked.task-done {
+  border-color: rgb(34 197 94);
+}
+.task-done.checked {
+  position: relative;
+}
+.task-done.checked:before {
+  position: absolute;
+  font-family: 'FontAwesome';
+  top: -6px;
+  left: -2px;
+  content: "\f058";
+  color: rgb(34 197 94);
+  font-size: 1rem;
+}
+.task-done.checked + .task-text {
+  text-decoration: line-through;
+}

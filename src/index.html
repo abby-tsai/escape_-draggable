@@ -1,0 +1,29 @@
+<div class="min-h-screen">
+  <div class="container px-4 py-2 mx-auto">
+    <div class="min-h-screen flex flex-col items-center justify-center">
+      <form name="form" id="form">
+        <div class="flex">
+          <input type="text" name="addTodo" id="addTodo" placeholder="Add todo">
+          <button type="submit" class="addTodoBtn-js">
+            <div class="text-2xl text-gray-200"><span class="task-del-js fas fa-plus-circle"></span></div>
+          </button>
+        </div>
+      </form>
+      <!-- 注意：當區塊內沒有待辦事項（ul 內沒有 li），會造成 ul 沒有高度而無法拖曳項目進入 -->
+      <section id="multiple-containers-js" class="multiple-containers w-full grid grid-cols-3 gap-4 mt-10">
+        <div class="rounded-lg bg-orange-700 shadow text-gray-100 p-6">
+          <h2 class="text-center text-2xl text-gray-200 p-2 mb-4">緊急</h2>
+          <ul class="stacked-list-js urgent" data-bg="rgb(194 65 12)" data-category="urgent"></ul>
+        </div>
+        <div class="rounded-lg bg-yellow-500 shadow p-6">
+          <h2 class="text-center text-2xl text-gray-200 p-2 mb-4">重要</h2>
+          <ul class="stacked-list-js important" data-bg="rgb(234 179 8)" data-category="important"></ul>
+        </div>
+        <div class="rounded-lg bg-sky-800 shadow p-6">
+          <h2 class="text-center text-2xl text-gray-200 p-2 mb-4">不急</h2>
+          <ul class="stacked-list-js normal" data-bg="rgb(7 89 133)" data-category="normal"></ul>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
